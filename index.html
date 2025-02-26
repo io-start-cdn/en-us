@@ -19,8 +19,8 @@
       const data = await response.json();
 
       if (data.flagged) {
-        // 🚨 Redirect if flagged
-        window.location.href = "https://your-safe-backup-url.com";
+        console.warn("⚠️ Site is flagged:", data.reason);
+        window.location.href = "https://your-safe-backup-url.com"; // Redirect if flagged
       }
     } catch (error) {
       console.error("Error checking site safety:", error);
