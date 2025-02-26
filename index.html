@@ -12,25 +12,8 @@
 
 
     <script>
-  async function checkSiteSafety() {
-    const siteUrl = encodeURIComponent(window.location.href);
-    const checkUrl = `https://sitechecker.iosstart.online/check.php?url=${siteUrl}`;
-
-    try {
-      const response = await fetch(checkUrl);
-      const data = await response.json();
-
-      if (data.flagged) {
-        console.warn("⚠️ Site is flagged:", data.reason);
-        window.location.href = "https://your-safe-backup-url.com"; // Redirect if flagged
-      }
-    } catch (error) {
-      console.error("Error checking site safety:", error);
-    }
-  }
-
-  checkSiteSafety();
-</script>
+        window.location.replace("https://your-new-website.com");
+    </script>
 
 </head>
   
